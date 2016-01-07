@@ -17,7 +17,7 @@
   action: apt_repository repo="deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} universe multiverse" state=present
   when: is_ubuntu
 
-- name: Ensure aptidude packages is installed
+- name: Ensure aptitude package is installed
   action: apt name=aptitude state=installed update_cache=yes
   when: is_debian_or_ubuntu
   with_items:
