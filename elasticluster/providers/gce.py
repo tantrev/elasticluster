@@ -327,6 +327,10 @@ class GoogleCloudProvider(AbstractCloudProvider):
                         "key": "sshKeys",
                         "value": "%s:%s" % (username, public_key_content)
                     }
+                    {
+                        "key": "startup-script",
+                        "value": open(image_userdata,'r')
+                    }
                 ]
             }
         }
