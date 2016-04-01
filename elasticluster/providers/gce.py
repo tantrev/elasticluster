@@ -330,7 +330,7 @@ class GoogleCloudProvider(AbstractCloudProvider):
                     ] + ([
                         {
                             "key": "startup-script",
-                            "value": image_userdata
+                            "value": open(image_userdata,'r')
                         }
                         ] if image_userdata else [])
             }
